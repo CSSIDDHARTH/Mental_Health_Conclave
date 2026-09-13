@@ -10,14 +10,13 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onExplore }) => {
   return (
-    <section id="home" className="relative pt-24 sm:pt-28 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-[#f0f5fc] via-[#f7fafc] to-[#ffffff]">
-      {/* Delicate background watermarks & Indian geometric/botanical elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-mandala-pattern" />
-      
-      {/* Ambient background soft glowing blobs */}
-      <div className="absolute -top-24 right-0 w-96 h-96 bg-sky-200/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 -left-20 w-80 h-80 bg-emerald-100/60 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
+    <section
+      id="home"
+      className="relative pt-[45vh] sm:pt-[50vh] lg:pt-[55vh] pb-16 lg:pb-24 overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/hero.png')" }}
+    >
+      {/* Light translucent backdrop overlay for text contrast and legibility */}
+      <div className="absolute inset-0 bg-white/20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
