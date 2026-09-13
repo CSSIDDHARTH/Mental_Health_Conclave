@@ -78,10 +78,7 @@ export const Footer: React.FC = () => {
               </p>
 
               {/* Verified Summit Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs text-slate-200">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Non-commercial Educational Initiative for Schools</span>
-              </div>
+              
             </div>
 
             {/* Column 2: Quick Links (Span 3) */}
@@ -166,26 +163,7 @@ export const Footer: React.FC = () => {
 
           </div>
 
-          {/* National Mental Health Awareness Helpline Strip */}
-          <div className="my-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 via-slate-900/60 to-blue-950/60 border border-blue-900/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-2.5 text-center sm:text-left">
-              <div className="w-7 h-7 rounded-full bg-blue-500/20 text-sky-400 flex items-center justify-center shrink-0">
-                <Heart className="w-3.5 h-3.5 fill-sky-400/20" />
-              </div>
-              <p className="text-slate-300">
-                <strong className="text-white">National Student &amp; Youth Support:</strong> In case of urgent emotional crisis, reach Government of India’s 24/7 Tele-MANAS helpline at <strong className="text-amber-300 font-mono">14416</strong>.
-              </p>
-            </div>
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 text-[11px] font-semibold transition-colors shrink-0"
-              title="Return to top"
-            >
-              <span>Back to Top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
+          
           {/* Sub-footer: Policies, Copyright, Legal Notice */}
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 border-t border-slate-800/60">
             <p className="text-center sm:text-left">
