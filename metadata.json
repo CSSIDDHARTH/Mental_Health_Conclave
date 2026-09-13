@@ -1,0 +1,6 @@
+{
+  "name": "School Mental Health Conclave 2026",
+  "description": "Official website for the School Mental Health Conclave 2026, organized by IAMH in collaboration with the Department of Psychiatry, Centre of Excellence, IMS-BHU.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
