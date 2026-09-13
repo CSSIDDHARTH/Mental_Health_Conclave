@@ -47,40 +47,34 @@ export const ProgramFocusSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 13 Focus Areas Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Focus Areas — Compact Tag Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredAreas.map((item: FocusArea) => (
             <div
               key={item.id}
-              className="bg-[#fcfdfe] rounded-2xl p-6 border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              className="bg-[#fcfdfe] rounded-xl px-4 py-3.5 border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-200 flex items-start gap-3"
             >
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border ${
-                    item.category === 'Emotional & Psychological'
-                      ? 'bg-blue-50 text-blue-800 border-blue-100'
-                      : item.category === 'Academic & Cognitive'
-                      ? 'bg-amber-50 text-amber-800 border-amber-100'
-                      : 'bg-emerald-50 text-emerald-800 border-emerald-100'
-                  }`}>
-                    {item.category}
-                  </span>
-                </div>
-
-                <h3 className="font-display text-lg font-bold text-slate-900 tracking-tight">
+              {/* Colour dot accent */}
+              <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${
+                item.category === 'Emotional & Psychological'
+                  ? 'bg-blue-500'
+                  : item.category === 'Academic & Cognitive'
+                  ? 'bg-amber-500'
+                  : 'bg-emerald-500'
+              }`} />
+              <div className="min-w-0">
+                <span className={`text-[10px] font-bold uppercase tracking-wider ${
+                  item.category === 'Emotional & Psychological'
+                    ? 'text-blue-600'
+                    : item.category === 'Academic & Cognitive'
+                    ? 'text-amber-700'
+                    : 'text-emerald-700'
+                }`}>
+                  {item.category}
+                </span>
+                <h3 className="font-display text-sm font-bold text-slate-900 leading-snug mt-0.5">
                   {item.title}
                 </h3>
-
-                <p className="mt-2.5 text-sm text-slate-600 leading-relaxed">
-                  {item.detail}
-                </p>
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-100/80 flex items-center justify-between text-xs text-slate-400">
-                <span className="font-medium text-slate-500">Pedagogical Intervention</span>
-                <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                  Early Recognition
-                </span>
               </div>
             </div>
           ))}

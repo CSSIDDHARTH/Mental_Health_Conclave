@@ -83,30 +83,22 @@ export const SchoolEcosystemSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 5 Connected Stakeholder Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-20">
+        {/* 5 Compact Stakeholder Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-16">
           {ECOSYSTEM_STAKEHOLDERS.map((stakeholder) => (
             <div
               key={stakeholder.role}
-              className="bg-[#fcfdfe] rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md hover:border-blue-300 transition-all flex flex-col justify-between"
+              className="bg-[#fcfdfe] rounded-2xl p-4 border border-slate-200 shadow-xs hover:shadow-md hover:border-blue-300 transition-all flex flex-col items-center text-center gap-2"
             >
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-3">
-                  {getIcon(stakeholder.iconName)}
-                </div>
-                <h4 className="font-display text-lg font-bold text-slate-900">
-                  {stakeholder.role}
-                </h4>
-                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  {stakeholder.description}
-                </p>
+              <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+                {getIcon(stakeholder.iconName)}
               </div>
-              <div className="mt-4 pt-3 border-t border-slate-100">
-                <span className="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Key Role</span>
-                <p className="text-xs font-semibold text-slate-800 leading-snug">
-                  {stakeholder.responsibility}
-                </p>
-              </div>
+              <h4 className="font-display text-sm font-bold text-slate-900 leading-tight">
+                {stakeholder.role}
+              </h4>
+              <p className="text-[11px] text-slate-500 leading-snug">
+                {stakeholder.responsibility}
+              </p>
             </div>
           ))}
         </div>

@@ -24,47 +24,49 @@ export const AboutSection: React.FC = () => {
         {/* Split Desktop Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Concept Note Direct Content */}
-          <div className="lg:col-span-7 space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
+          {/* Left Column: Compact Concept Note */}
+          <div className="lg:col-span-7 space-y-5 text-slate-700">
             
-            <div className="relative pl-6 border-l-4 border-blue-600">
-              <p className="font-medium text-slate-900 text-lg sm:text-xl leading-snug">
-                In today's rapidly changing social, academic and digital environment, children and adolescents face a range of behavioural, emotional, psychological and social challenges.
+            <div className="relative pl-4 border-l-4 border-blue-600">
+              <p className="font-medium text-slate-900 text-base sm:text-lg leading-snug">
+                In today's rapidly changing environment, children and adolescents face growing behavioural, emotional, and psychological challenges that schools are uniquely positioned to address.
               </p>
             </div>
 
-            <p>
-              Academic pressure, changing family dynamics, peer relationships, excessive digital exposure, social media, competition and evolving expectations can influence the emotional and psychological well-being of young people.
-            </p>
+            {/* Compact bullet points replacing three long paragraphs */}
+            <ul className="space-y-2 text-sm text-slate-600">
+              <li className="flex items-start gap-2.5">
+                <span className="text-blue-400 mt-1 shrink-0">•</span>
+                <span>Academic pressure, peer dynamics, and digital exposure impact student emotional well-being.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-blue-400 mt-1 shrink-0">•</span>
+                <span>Schools play a critical role beyond academics — in resilience, positive behaviour, and psychological health.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-blue-400 mt-1 shrink-0">•</span>
+                <span>The Conclave builds practical skills among students, teachers, and leadership to address these challenges.</span>
+              </li>
+            </ul>
 
-            <p>
-              Schools have a critical role not only in academic development, but also in promoting emotional well-being, healthy relationships, resilience, positive behaviour and psychological adjustment.
-            </p>
-
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-50/70 via-sky-50/50 to-emerald-50/40 border border-blue-100 shadow-2xs">
-              <p className="font-semibold text-slate-900 leading-snug">
-                The School Mental Health Conclave aims to create greater awareness and build practical skills among students, teachers and school leadership to address these challenges effectively.
-              </p>
-            </div>
-
-            {/* Core Pillars List */}
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-sm font-semibold text-slate-800">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Evidence-Based Psychiatric Literacy</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Non-Escalating Behaviour Management</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Student Empathy &amp; Peer Support</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Institutional Care Protocols</span>
-              </div>
+            {/* Core Pillars — compact inline tags */}
+            <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-700">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Evidence-Based Psychiatric Literacy
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-700">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Non-Escalating Behaviour Management
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-700">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Student Empathy &amp; Peer Support
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-700">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Institutional Care Protocols
+              </span>
             </div>
 
           </div>
