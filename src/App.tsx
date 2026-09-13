@@ -17,13 +17,11 @@ import { VenueSection } from './components/VenueSection';
 import { RegistrationSection } from './components/RegistrationSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { EVENT_DETAILS } from './data/conclaveData';
 
 export default function App() {
-  const scrollToRegistration = () => {
-    const el = document.getElementById('registration');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleRegisterRedirect = () => {
+    window.open(EVENT_DETAILS.registrationUrl, '_blank', 'noopener,noreferrer');
   };
 
   const scrollToAbout = () => {
@@ -36,12 +34,12 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#fcfdfe] text-slate-800 font-sans selection:bg-sky-200 selection:text-slate-900">
       {/* Sticky Navigation Bar */}
-      <Navbar onOpenRegister={scrollToRegistration} />
+      <Navbar onOpenRegister={handleRegisterRedirect} />
 
       {/* Main Landing Page Sections */}
       <main className="flex-grow">
         {/* 1. Hero Section */}
-        <Hero onOpenRegister={scrollToRegistration} onExplore={scrollToAbout} />
+        <Hero onOpenRegister={handleRegisterRedirect} onExplore={scrollToAbout} />
 
         {/* 2. Key Event Info Strip */}
         <EventInfoStrip />
@@ -68,10 +66,10 @@ export default function App() {
         <SchoolEcosystemSection />
 
         {/* 10. School Participation Structure (Delegation breakdown) */}
-        <ParticipationSection onRegisterClick={scrollToRegistration} />
+        <ParticipationSection onRegisterClick={handleRegisterRedirect} />
 
         {/* 11. Participation Fee Section (₹11,000 /- Per School) */}
-        <ParticipationFeeSection onRegisterClick={scrollToRegistration} />
+        <ParticipationFeeSection onRegisterClick={handleRegisterRedirect} />
 
         {/* 12. Certification & Recognition */}
         <CertificationSection />
@@ -86,7 +84,7 @@ export default function App() {
         <RegistrationSection />
 
         {/* 16. Contact Section (Official Helpline: 9696384984) */}
-        <ContactSection onRegisterClick={scrollToRegistration} />
+        <ContactSection onRegisterClick={handleRegisterRedirect} />
       </main>
 
       {/* 17. Footer */}

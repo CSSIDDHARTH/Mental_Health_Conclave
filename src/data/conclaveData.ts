@@ -17,6 +17,7 @@ export const EVENT_DETAILS = {
   participationFee: "₹11,000 /-",
   feeScope: "Per School (covers designated delegation of students, teachers, and school leadership)",
   visionStatement: "Every Child Deserves a Mentally Healthy School.",
+  registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSennJI_E2ImGjPBwe8pOtfUPG54PH4gQWG0_JtixShWNaTFMw/viewform",
 };
 
 export const DELEGATION_STRUCTURE = {

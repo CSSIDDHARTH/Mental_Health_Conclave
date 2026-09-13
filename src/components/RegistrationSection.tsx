@@ -20,8 +20,8 @@ import { IAMHLogo } from './InstitutionalBadges';
 export const RegistrationSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
   
-  // Default Google Form link - easily customizable
-  const googleFormUrl = "https://forms.google.com";
+  // Official Google Form link
+  const googleFormUrl = EVENT_DETAILS.registrationUrl;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(googleFormUrl);
@@ -67,7 +67,7 @@ export const RegistrationSection: React.FC = () => {
               </div>
 
               {/* QR Code Container with High-Tech Targeting Corners */}
-              <div className="w-full max-w-[280px] sm:max-w-[320px] aspect-square relative p-5 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center my-4 group">
+              <div className="w-full max-w-[280px] sm:max-w-[320px] aspect-square relative p-4 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center my-4 group">
                 
                 {/* Targeting Corners */}
                 <span className="absolute top-2 left-2 w-5 h-5 border-t-4 border-l-4 border-amber-500 rounded-tl-lg pointer-events-none" />
@@ -75,13 +75,13 @@ export const RegistrationSection: React.FC = () => {
                 <span className="absolute bottom-2 left-2 w-5 h-5 border-b-4 border-l-4 border-amber-500 rounded-bl-lg pointer-events-none" />
                 <span className="absolute bottom-2 right-2 w-5 h-5 border-b-4 border-r-4 border-amber-500 rounded-br-lg pointer-events-none" />
 
-                {/* QR Code Graphic / Image Fallback */}
-                <div className="relative w-full h-full flex items-center justify-center p-2">
+                {/* QR Code Graphic / Image */}
+                <div className="relative w-full h-full flex items-center justify-center p-1">
                   <img
-                    src="/registration-qr.png"
-                    alt="Scan QR Code to register on Google Forms"
+                    src="/qrcode_docs.google.com.png"
+                    alt="Scan QR Code to register for School Mental Health Conclave 2026 on Google Forms"
                     onError={(e) => {
-                      // If custom image is not found, fallback to generated SVG QR
+                      // Fallback if image fails
                       (e.target as HTMLElement).style.display = 'none';
                       const fallback = document.getElementById('qr-svg-fallback');
                       if (fallback) fallback.style.display = 'block';
@@ -150,7 +150,7 @@ export const RegistrationSection: React.FC = () => {
                     Google Forms Registration QR
                   </span>
                   <span className="text-[10px] text-slate-500">
-                    Scan with any Camera or Google Lens
+                    
                   </span>
                 </div>
               </div>
